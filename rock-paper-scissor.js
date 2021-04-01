@@ -5,8 +5,8 @@ function computerPlay() {
   const randomIndex = Math.floor(Math.random() * hand.length);
   return hand[randomIndex];
 }
-function play(playerSelection, computerSelection) {
-  const playerSelection = playerSelection.toLowerCase();
+function play(playerChoice, computerSelection) {
+  let playerSelection = playerChoice.toLowerCase();
   if (playerSelection === computerSelection)
     return "Draw! Both choose " + playerSelection;
   if (
@@ -23,10 +23,11 @@ function play(playerSelection, computerSelection) {
 }
 
 function game() {
+  console.log("The game has started!");
   for (let i = 0; i < 5; i++) {
     const computerSelection = computerPlay();
-    let playerSelection = prompt("What do you wanna play?");
-    console.log(play(playerSelection, computerSelection));
+    const playerChoice = prompt("What do you wanna play?");
+    console.log(play(playerChoice, computerSelection));
     console.log("Human:" + human + " vs Computer:" + computer);
   }
 }
