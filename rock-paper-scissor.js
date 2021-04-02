@@ -22,12 +22,13 @@ function play(playerChoice, computerSelection) {
   }
 }
 
-function game() {
+function game(playerChoice) {
   console.log("The game has started!");
-  for (let i = 0; i < 5; i++) {
-    const computerSelection = computerPlay();
-    const playerChoice = prompt("What do you wanna play?");
-    console.log(play(playerChoice, computerSelection));
-    console.log("Human:" + human + " vs Computer:" + computer);
-  }
+  const computerSelection = computerPlay();
+  console.log(play(playerChoice, computerSelection));
+  console.log("Human:" + human + " vs Computer:" + computer);
 }
+
+document.getElementById("paper").addEventListener("click", game("paper"));
+document.getElementById("scissor").addEventListener("click", game("scissor"));
+document.getElementById("rock").addEventListener("click", game("rock"));
