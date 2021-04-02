@@ -23,7 +23,6 @@ function play(playerChoice, computerSelection) {
 }
 
 function game(playerChoice) {
-  console.log("The game has started!");
   const computerSelection = computerPlay();
   console.log(play(playerChoice, computerSelection));
   console.log("Human:" + human + " vs Computer:" + computer);
