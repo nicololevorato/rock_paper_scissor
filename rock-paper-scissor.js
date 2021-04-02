@@ -29,6 +29,8 @@ function game(playerChoice) {
   console.log("Human:" + human + " vs Computer:" + computer);
 }
 
-document.getElementById("paper").addEventListener("click", game("paper"));
-document.getElementById("scissor").addEventListener("click", game("scissor"));
-document.getElementById("rock").addEventListener("click", game("rock"));
+document.getElementById("paper").addEventListener("click", () => game("paper"));
+document
+  .getElementById("scissor")
+  .addEventListener("click", () => game("scissor"));
+document.getElementById("rock").addEventListener("click", () => game("rock"));
